@@ -57,7 +57,7 @@
                     <i class="fa fa-bullhorn icon-list" style="color:#fff;"></i> <h4>  &nbsp; Advertise your Business/service </h4>
                 </div>
                 <div class='col-md-3'>
-                    <i class="fa fa-shopping-cart icon-list" style="color:#fff;"></i> <h4> &nbsp; Buy items/Find shops     <h1><?php echo $post_data['one']; ?></h1>  </h4>
+                    <i class="fa fa-shopping-cart icon-list" style="color:#fff;"></i> <h4> &nbsp; Buy items/Find shops   </h4>
                 </div>
 
             </div>
