@@ -1,0 +1,82 @@
+<div class="container-fluid" id="login-view" ng-controller="signupController">
+    <div class="container" style="margin-top:135px;margin-bottom:100px;">
+        <div class="row">
+            <div class=" col-md-offset-2 col-lg-4">
+                <div class="form-box">
+                    <form role="form" class="form" name="hiShoppieSignupForm" ng-submit="saveData()" novalidate>
+                        <div class="form-group" ng-class="{ 'has-error' : hiShoppieSignupForm.email.$invalid && (hiShoppieSignupForm.email.$dirty || submitted)}">
+                            <div class="input-group">
+                                <label for="email" class="control-label pull-left">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                                <input type="email" class="form-control" id="email" name="email" ng-model="user.email" placeholder="example@gmail.com" ng-required="true">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error' : hiShoppieSignupForm.password.$invalid && (hiShoppieSignupForm.password.$dirty || submitted)}">
+                            <div class="input-group">
+                                <label for="password" class="control-label pull-left">Password</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                <input type="password" class="form-control" id="password" name="password" ng-model="user.password"  placeholder="password" ng-required="true">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error' : hiShoppieSignupForm.repassword.$invalid && (hiShoppieSignupForm.repassword.$dirty || submitted)}">
+                            <div class="input-group">
+                                <label for="password" class="control-label pull-left">Re-enter Password</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                <input type="password" class="form-control" id="repassword" ng-model="user.repassword" name="repassword" ng-compare="password" placeholder="re-enter password" ng-required="true">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error' : hiShoppieSignupForm.username.$invalid && (hiShoppieSignupForm.username.$dirty || submitted)}">
+                            <div class="input-group">
+                                <label for="username" class="control-label pull-left">Username</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                <input type="text" class="form-control" id="username" name="username" ng-model="user.username" placeholder="haiShoppie username" ng-required="true">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group pull-left" ng-class="{ 'has-error' : hiShoppieSignupForm.terms.$invalid && (hiShoppieSignupForm.terms.$dirty || submitted)}">
+                            <input type="checkbox" value="" name="terms" ng-model="user.terms" ng-required="true" />
+                            <label>I Accept <a href="#">Terms & Conditions</a></label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success pull-right" ng-disabled="hiShoppieSignupForm.$invalid">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1 text-center">
+                <div class="hr" id="hr_reg">&nbsp;</div> 
+            </div>
+            <div class="col-md-5 information">
+                <div class="text-left" >
+                    <p class="lead"> Register with <span class="text-success">Social</span></p><br>
+                    <ul class="list-unstyled pull-left" style="line-height: 2">
+                        <li>
+                            <p><a href='#' class='btn btn-info btn-block'> &nbsp; &nbsp; <i class="fa fa-twitter"></i>  &nbsp; Login with twitter &nbsp; &nbsp; &nbsp; </a></p></li>
+                        <li> <p><a href='#' class='btn btn-primary btn-block '> &nbsp; &nbsp; <i class="fa fa-facebook"></i>  &nbsp; Login with facebook &nbsp; &nbsp; &nbsp;</a></p>
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="text-left" style="margin-top: 104px;">
+                    <p class="lead"> Already have  <span class="text-success">Account ?</span></p><br>
+                    <ul class="list-unstyled pull-left" style="line-height: 2">
+                        <li>
+                            <p><a href='#login' class='btn btn-hishoppie btn-block' ng-click="scrollFunction()"> &nbsp; &nbsp; <i class="fa fa-lock"></i>  &nbsp; Login to my account &nbsp; &nbsp; &nbsp;</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

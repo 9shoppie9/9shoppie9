@@ -1,0 +1,57 @@
+<div class="container-fluid" id="login-view" ng-controller="loginController">
+    <div class="container" id="login-body">
+        <div class="row">
+            <div class=" col-md-offset-2 col-lg-4">
+                <div class="form-box">
+                    <form role="form" class="form" name="hiShoppieLoginForm" ng-submit="checkLogin()" novalidate>
+                        <div class="form-group" ng-class="{ 'has-error' : hiShoppieLoginForm.email.$invalid && (hiShoppieLoginForm.email.$dirty || submitted) }">
+                            <div class="input-group">
+                                <label for="email" class="control-label pull-left">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                                <input type="email" class="form-control" id="email" ng-model="login.email" name="email" placeholder="email" ng-required="true">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error' : hiShoppieLoginForm.password.$invalid && (hiShoppieLoginForm.password.$dirty || submitted) }">
+                            <div class="input-group">
+                                <label for="password" class="control-label pull-left">Password</label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                <input type="password" class="form-control" ng-model="login.password" id="password" name="password" placeholder="password" ng-required="true">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div id="error-msg" class="alert alert-error hide">Wrong username or password</div>
+                        <div class="form-group pull-left" ng-class="{ 'has-error' : hiShoppieLoginForm.terms.$invalid && (hiShoppieLoginForm.terms.$dirty || submitted)}">
+                            <input type="checkbox" value="false" name="terms" ng-model="login.terms" />
+                            <label>   Remember me </label>
+                                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="#forgot">Forgot Password</a>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success pull-right" ng-disabled="hiShoppieLoginForm.$invalid">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="hr">&nbsp;</div> 
+            </div>
+            <div class="col-md-5 information">
+                <div class="text-left" >
+                    <p class="lead"> Register now for <span class="text-success">FREE</span></p>
+                    <ul class="list-unstyled pull-left" style="line-height: 2">
+                        <li> <span class="glyphicon glyphicon-ok"></span> Advertise your business. </li>
+                        <li> <span class="glyphicon glyphicon-ok"></span> Post Ads for free </li>
+                        <li> <span class="glyphicon glyphicon-ok"></span> Instant chat available </li>
+                        <li> <span class="glyphicon glyphicon-ok"></span> View you Ad statistics  </li>
+                        <li> <p><br> <a href="#signup" class="btn btn-info btn-block" ng-click="scrollFunction()">Hey !! Create my account now</a></p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
