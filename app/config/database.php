@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'hi_shoppie_db',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'murthy',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
